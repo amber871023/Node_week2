@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "79f15766-47e0-41f9-ae98-d5a8d9d6f8dd",
+		"name": "post-heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得所有貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tranquil-savannah-48218.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"tranquil-savannah-48218",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"test content\",\n    \"name\": \"aaa\",\n    \"image\":\"\"\n}"
+				},
+				"url": {
+					"raw": "https://tranquil-savannah-48218.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"tranquil-savannah-48218",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://tranquil-savannah-48218.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"tranquil-savannah-48218",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://tranquil-savannah-48218.herokuapp.com/posts/62769a12a88351b27947aeca",
+					"protocol": "https",
+					"host": [
+						"tranquil-savannah-48218",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"62769a12a88351b27947aeca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯單筆貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"test\",\n    \"name\": \"ABC\",\n    \"image\": \"\"\n}"
+				},
+				"url": {
+					"raw": "https://tranquil-savannah-48218.herokuapp.com/posts/62769a12a88351b27947aeca",
+					"protocol": "https",
+					"host": [
+						"tranquil-savannah-48218",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"62769a12a88351b27947aeca"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
