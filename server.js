@@ -11,7 +11,8 @@ const DB = process.env.DATABASE.replace(
 
 mongoose
   .connect(DB)
-  .then(() => console.log('資料庫成功連結'));
+  .then(() => console.log('資料庫成功連結'))
+  .catch(err => console.log(err))
 
 const requestListener = async (req, res) => {
   routes(req, res);

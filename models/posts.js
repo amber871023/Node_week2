@@ -12,7 +12,7 @@ const postSchema = new mongoose.Schema(
     },
     createdAt:{ //建立時間（轉Timestamp)
       type: Number,
-      default: new Date().getTime(),
+      default: () => new Date().getTime(),
       select: false
     },
     name:{ //貼文名稱

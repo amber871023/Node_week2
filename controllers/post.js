@@ -41,9 +41,11 @@ const updatePost = async ({req, res, body}) =>{
   try{
     const id = req.url.split('/').pop();
     const data = JSON.parse(body);
-    const editedPost = await Post.findByIdAndUpdate(id, data, { new: true });
-    if(data.content !== undefined && editedPost){
-      handleSuccess(res, editedPost);
+    if(data.content && data.name){
+      const editedPost = await Post.findByIdAndUpdate(id, data, { new: true });
+      if(editedPost){
+        handleSuccess(res, editedPost);
+      }
     }else{
       handleError(res, errorMsg.PATCH);
     }
